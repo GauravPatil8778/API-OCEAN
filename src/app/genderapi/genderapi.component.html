@@ -1,0 +1,21 @@
+<div class="container">
+    <h1 class="app-title">Predict Gender By Name</h1>
+    <div class="input-wrapper">
+       
+        <input type="text" id="name" placeholder="Enter Name" (keyup)="onKey($event)">
+        <button type="button" id="submit" (click)="onClick()">Predict</button>
+        
+
+    </div>
+    <div id="result">
+      <div id="wrapper">
+        <div id="info">
+          <h1 id="result-name">{{resultname}}</h1>
+          <img style="border: red 1px solid; background-color: aliceblue;" [src]="symbol" id="gender-icon" alt="">
+          <h1 id="gender">{{resultgender}}</h1>
+          <h1 id="prob">Probability :{{probability}}</h1>
+        </div>
+      </div>
+      <div id="error">{{error}}</div>
+    </div>
+  </div>
